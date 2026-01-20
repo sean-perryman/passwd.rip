@@ -1,4 +1,4 @@
-# passwd.it
+# passwd.rip
 
 A tiny password generator website + CLI endpoint designed for deployment on Railway.
 
