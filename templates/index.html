@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>passwd.it</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="header">
+      <div>
+        <h1>passwd.it</h1>
+        <p class="sub">Click the password to copy it.</p>
+      </div>
+
+      <button id="refreshBtn" class="icon-btn" title="Refresh password" aria-label="Refresh password">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12a9 9 0 1 1-2.64-6.36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M21 3v6h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </header>
+
+    <section class="pw-wrap">
+      <div id="password" class="password" tabindex="0" role="button" aria-label="Password to copy">
+        {{ password }}
+      </div>
+      <div id="toast" class="toast" aria-live="polite"></div>
+    </section>
+
+    <section class="notes">
+      <p>Passwords are generated on demand and are <strong>not stored</strong>.</p>
+      <p class="muted">CLI: <code>curl https://passwd.it</code> → one password + newline.</p>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
